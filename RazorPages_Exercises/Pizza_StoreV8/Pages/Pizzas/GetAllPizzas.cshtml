@@ -1,0 +1,73 @@
+﻿@page
+@model Pizza_StoreV8.GetAllPizzasModel
+@{
+    ViewData["Title"] = "GetAllPizzas";
+}
+<h1>GetAllPizzas</h1>
+
+<p>
+    <a asp-page="CreatePizza">Create New Pizza</a>
+</p>
+
+<form>
+    <p>
+        Search: <input type="text" asp-for="FilterCriteria" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Image
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Pizzas)
+        {
+            <tr>
+                <td>
+                    @item.Value.Id
+                </td>
+                <td>
+                    @item.Value.Name
+                </td>
+                <td>
+                    @item.Value.Description
+                </td>
+                <td>
+                    @item.Value.Price
+                </td>
+                <td>
+                    <img src="~/Images/@item.Value.ImageName" width="60" height="70">
+                </td>
+                <td>
+                    <p>
+                        <a asp-page="EditPizza" asp-route-id="@item.Key">Edit</a> |
+                        <a asp-page="DeletePizza" asp-route-id="@item.Key">Delete</a>
+                    </p>
+                </td>
+            </tr>
+        }
+    </tbody>
+    
+</table>
+
+
+
+

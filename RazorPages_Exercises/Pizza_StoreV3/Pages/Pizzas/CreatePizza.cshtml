@@ -1,0 +1,36 @@
+﻿@page
+@model Pizza_StoreV3.CreatePizzaModel
+@{
+    ViewData["Title"] = "CreatePizza";
+}
+
+<h1>CreatePizza</h1>
+
+<form method="post">
+
+    <div class="form-group">
+        <label asp-for="@Model.Pizza.Id" class="control-label"> Id </label>
+        <input asp-for="@Model.Pizza.Id" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label  asp-for="@Model.Pizza.Name"  class="control-label">Name </label>
+        <input asp-for="@Model.Pizza.Name" class="form-control" />
+
+    </div>
+    <div class="form-group">
+        <label   asp-for="@Model.Pizza.Description" class="control-label">Description</label>
+        <input  asp-for="@Model.Pizza.Description" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Pizza.Price" class="control-label">Price</label>
+        <input asp-for="@Model.Pizza.Price" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Pizza.ImageName" class="control-label"> ImageName </label>
+        <input asp-for="@Model.Pizza.ImageName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>

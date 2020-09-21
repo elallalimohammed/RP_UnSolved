@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Images\Aubergine_pizza.jfif" />
+    <None Include="wwwroot\Images\Bufalla_pizza.jfif" />
+    <None Include="wwwroot\Images\Cheeze_pizza.jfif" />
+    <None Include="wwwroot\Images\Chicken_pizza.jfif" />
+    <None Include="wwwroot\Images\Margherita_pizza.jfif" />
+    <None Include="wwwroot\Images\Mozzarella_pizza.jfif" />
+    <None Include="wwwroot\Images\Vegetable_pizza.jfif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+  </ItemGroup>
+
+</Project>

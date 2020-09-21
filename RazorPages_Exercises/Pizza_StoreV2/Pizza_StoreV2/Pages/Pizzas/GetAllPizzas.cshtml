@@ -1,0 +1,55 @@
+﻿@page
+@model Pizza_StoreV2.Pages.GetAllPizzasModel
+@{
+    ViewData["Title"] = "GetAllPizzas";
+}
+<h1>GetAllPizzas</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Image
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Pizzas)
+        {
+            <tr>
+                <td>
+                    @item.Value.Id
+                </td>
+                <td>
+                    @item.Value.Name
+                </td>
+                <td>
+                    @item.Value.Description
+                </td>
+                <td>
+                    @item.Value.Price
+                </td>
+                <td>
+                    <img src="~/Images/@item.Value.ImageName" width="60" height="70">
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+
+

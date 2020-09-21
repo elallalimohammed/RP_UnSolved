@@ -1,0 +1,16 @@
+{
+  "1": {
+    "Id": 1,
+    "Name": "Cheese Pizza",
+    "Description": " alot of cheese",
+    "Price": 88.0,
+    "ImageName": "Cheese_pizza.jfif"
+  },
+  "2": {
+    "Id": 2,
+    "Name": "Vegetable",
+    "Description": "a lot of begetables",
+    "Price": 66.0,
+    "ImageName": "Vegetable_pizza.jfif"
+  }
+}
