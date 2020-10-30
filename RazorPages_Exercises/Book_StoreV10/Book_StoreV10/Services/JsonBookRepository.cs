@@ -8,7 +8,7 @@ namespace Book_StoreV10.Services
 {
     public class JsonBookRepository
     {
-        string JsonFileName = @"C:\Users\EASJ\Desktop\Upload v10\Book_StoreV10\Book_StoreV10\Data\JsonBooksStock.json";
+        string JsonFileName= @"C:\Users\EASJ\Desktop\Upload v10\Book_StoreV10\Book_StoreV10\Data\JsonBooksStock.json";
 
         public List<Book> GetAllBooks()
         {
