@@ -1,0 +1,23 @@
+[
+  {
+    "Price": 200.0,
+    "Title": "Programming",
+    "ISBN": "111",
+    "Author": "mohammed",
+    "ImageName": "Coders.jfif"
+  },
+  {
+    "Price": 100.0,
+    "Title": "Design",
+    "ISBN": "222",
+    "Author": "Hans",
+    "ImageName": "Java.jfif"
+  },
+  {
+    "Price": 56.0,
+    "Title": "Marketing",
+    "ISBN": "333",
+    "Author": "Peter",
+    "ImageName": "Marketing_Made_Simple.jfif"
+  }
+ ]

@@ -26,7 +26,7 @@ namespace Pizza_StoreV9.Services
 
         public void DeletePizza(Pizza pizza)
         {
-            throw new NotImplementedException();
+            // not implemented;
         }
 
         public Dictionary<int, Pizza> FilterPizza(string criteria)
@@ -43,15 +43,14 @@ namespace Pizza_StoreV9.Services
                 return filteredPizzas;
             
         }
-
         public Pizza GetPizza(int id)
         {
-            throw new NotImplementedException();
+            // not implemented yet;
+            return new Pizza();
         }
-
         public void UpdatePizza(Pizza pizza)
         {
-            throw new NotImplementedException();
+            // not implemented yet
         }
     }
 }

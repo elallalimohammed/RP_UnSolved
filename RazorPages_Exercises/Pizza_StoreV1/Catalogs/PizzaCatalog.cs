@@ -21,8 +21,8 @@ namespace Pizza_StoreV1.PizzaCatalogs
 
         public Dictionary<int,Pizza> AllPizzas()
         {
-            // not implemented yet , We return null to avoid compile error
-            return null;
+            // not implemented yet , We return an empty dictionary to avoid compile error
+            return new Dictionary<int,Pizza>();
         }
     }
 }

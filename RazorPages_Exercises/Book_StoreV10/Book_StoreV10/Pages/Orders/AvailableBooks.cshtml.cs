@@ -5,13 +5,13 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Pizza_StoreV1
+namespace Book_StoreV10
 {
-    public class GetAllPizzasModel : PageModel
+    public class AvailableBooksModel : PageModel
     {
         public void OnGet()
         {
-            
+
         }
     }
 }
