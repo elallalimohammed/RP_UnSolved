@@ -4,19 +4,20 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Pizza_StoreV3.Models;
-using Pizza_StoreV3.PizzaCatalogs;
+using Pizza_StoreV5.Catalogs;
+using Pizza_StoreV5.Models;
 
-namespace Pizza_StoreV3
+namespace Pizza_StoreV5
 {
     public class CreatePizzaModel : PageModel
     {
         private PizzaCatalog catalog;
+        
         [BindProperty]
         public Pizza Pizza { get; set; }
         public CreatePizzaModel()
         {
-            catalog = new PizzaCatalog();
+            catalog = PizzaCatalog.Instance;
         }
         public IActionResult OnGet()
         {
@@ -25,8 +26,12 @@ namespace Pizza_StoreV3
 
         public IActionResult OnPost()
         {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
             catalog.AddPizza(Pizza);
-           return RedirectToPage("GetAllPizzas");
+            return RedirectToPage("GetAllPizzas");
         }
     }
 }
