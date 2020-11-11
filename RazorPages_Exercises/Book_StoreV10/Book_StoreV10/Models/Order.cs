@@ -9,9 +9,9 @@ namespace Book_StoreV10.Models
 {
     public class Order
     {     
-        //public int OrderID { get; set; }          
-        //public Student Student { get; set; }
-        //public List<Book> Books { get; set; }
-        //public DateTime DateTime { get; set; }
+        public int OrderID { get; set; }          
+        public Student Student { get; set; }
+        public List<Book> Books { get; set; }
+        public DateTime DateTime { get; set; }
     }
 }

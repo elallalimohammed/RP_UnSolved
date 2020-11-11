@@ -4,11 +4,7 @@
     ViewData["Title"] = "AllBooks";
 }
 
-<p>
- <a asp-page="CreateBook">Create New book</a>
-</p>
-
-<h1>AllBooks</h1>
+<h1> AllBooks </h1>
 <table class="table">
     <thead>
         <tr>
@@ -19,9 +15,8 @@
         </tr>
     </thead>
     <tbody>
-       @if(Model.Books.Count!=0)
-        {
-        
+    @if(Model.Books.Count!=0)
+        {        
         @foreach (var item in Model.Books)
         {
         <tr>
@@ -35,34 +30,17 @@
                 @item.Price
             </td>
             <td>
-                <img src="~/Books/@item.ImageName" width="60" height="70">
+                <img src="~/Books/@item.ImageName" width="80" height="70">
             </td>
             <td>
-                <p>
-                    @*<a asp-page="EditPizza" asp-route-id="@item.Key">Edit</a> |
-                <a asp-page="DeletePizza" asp-route-id="@item.Key">Delete</a>|
-                <a asp-page-handler="Cart/AddPizza" asp-route-id="@item.Key">Add to Chart</a>*@
-                </p>
-            </td>
-            <td>
-                <div class="col-lg-1">
-                    @*<form method="post">*@
-                    @*<button asp-page="/Orders/ShoppingCart" asp-page-handler="add" asp-route-id="@item.Key" class="btn btn-default">Add to Chart</button>*@
-                    @*<button asp-page="/Orders/ShoppingCart" asp-page-handler="add" asp-route-id="@item.Key"
-                class="btn btn-success btn-sm pull-right">*@
-
-                    @*<a asp-page="/Orders/ShoppingCart" asp-route-isbn="@item.ISBN"
-                       class="btn btn-success btn-sm pull-right">
-                        To Cart
-                    </a>*@
-                    @*</form>*@
-                </div>
-
-            </td>
+                <a asp-page="/Orders/ShoppingCart" asp-route-isbn="@item.ISBN"
+                       class="btn btn-success btn-group-lg pull-right"  >
+                        Add To Cart
+                </a>
+            </td>          
         </tr>
         }
         }
     </tbody>
-
 </table>
 

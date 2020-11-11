@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Book_StoreV10.Interfaces;
+using Book_StoreV10.Repositories;
 using Book_StoreV10.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -25,7 +27,11 @@ namespace Book_StoreV10
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddSingleton<JsonBookRepository>();
+            services.AddTransient<IBooksRepository,JsonBookRepository>();
+            
+            services.AddSingleton<ShoppingCartService>();
+            services.AddSingleton<JsonOrderRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

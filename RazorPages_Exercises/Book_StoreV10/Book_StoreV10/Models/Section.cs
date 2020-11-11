@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 namespace Book_StoreV10.Models
 {
    public enum Section
-    {
-        //Business,
-        //IT,
-        //Marketing
+    {   
+        IT,
+        Marketing,
+        Business
     }
 }

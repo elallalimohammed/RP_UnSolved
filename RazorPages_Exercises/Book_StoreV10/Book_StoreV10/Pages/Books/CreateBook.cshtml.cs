@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Book_StoreV10.Interfaces;
 using Book_StoreV10.Models;
 using Book_StoreV10.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -11,17 +12,17 @@ namespace Book_StoreV10
 {
     public class CreateBookModel : PageModel
     {
-        private JsonBookRepository catalog;
+        private IBooksRepository repository;
         [BindProperty]
         public Book Book { get; set; }
-        
-        public CreateBookModel( JsonBookRepository cat)
+        public List<Book> Books { get; set; }
+        public CreateBookModel(IBooksRepository repo)
         {
-            catalog = cat;
+            repository = repo;
         }
         public void OnGet()
         {
-
+           Books= repository.GetAllBooks();
         }
 
         public IActionResult OnPost()
@@ -29,9 +30,10 @@ namespace Book_StoreV10
             if (!ModelState.IsValid)
             {
                 return Page();
-            }           
-            catalog.AddBook(Book);
-            return RedirectToPage("AllBooks");         
+            }
+            repository.AddBook(Book);
+            Books = repository.GetAllBooks();
+            return RedirectToPage("CreateBook");           
         }
     }
 }
